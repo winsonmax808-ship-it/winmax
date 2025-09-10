@@ -40,6 +40,7 @@
 		6467317E2E4CE97800C57573 /* TradeListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6467317D2E4CE97800C57573 /* TradeListViewModel.swift */; };
 		646731802E4CE98700C57573 /* TradeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6467317F2E4CE98700C57573 /* TradeListView.swift */; };
 		646731832E4CEAD500C57573 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646731822E4CEAD500C57573 /* OnboardingView.swift */; };
+		647F02F02E71C36B00DA89B0 /* FlagsmithClient in Frameworks */ = {isa = PBXBuildFile; productRef = 647F02EF2E71C36B00DA89B0 /* FlagsmithClient */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -98,6 +99,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6467313F2E4CD33500C57573 /* RealmSwift in Frameworks */,
+				647F02F02E71C36B00DA89B0 /* FlagsmithClient in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +308,7 @@
 			name = CardHolderAPP;
 			packageProductDependencies = (
 				6467313E2E4CD33500C57573 /* RealmSwift */,
+				647F02EF2E71C36B00DA89B0 /* FlagsmithClient */,
 			);
 			productName = CardHolderAPP;
 			productReference = 646731012E4CD21600C57573 /* CardHolderAPP.app */;
@@ -337,6 +340,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				6467313D2E4CD33500C57573 /* XCRemoteSwiftPackageReference "realm-swift" */,
+				647F02EE2E71C36B00DA89B0 /* XCRemoteSwiftPackageReference "flagsmith-ios-client" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 646731022E4CD21600C57573 /* Products */;
@@ -430,6 +434,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CardHolderAPP/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "WINMAX - Cards Collection";
+				INFOPLIST_KEY_NSCameraUsageDescription = "The camera allows you to add visual materials and makes using the app more convenient.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -441,7 +446,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.wmcardcollection;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -466,6 +471,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CardHolderAPP/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "WINMAX - Cards Collection";
+				INFOPLIST_KEY_NSCameraUsageDescription = "The camera allows you to add visual materials and makes using the app more convenient.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -477,7 +483,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.wmcardcollection;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -642,6 +648,14 @@
 				kind = branch;
 			};
 		};
+		647F02EE2E71C36B00DA89B0 /* XCRemoteSwiftPackageReference "flagsmith-ios-client" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Flagsmith/flagsmith-ios-client.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.8.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -649,6 +663,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 6467313D2E4CD33500C57573 /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = RealmSwift;
+		};
+		647F02EF2E71C36B00DA89B0 /* FlagsmithClient */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 647F02EE2E71C36B00DA89B0 /* XCRemoteSwiftPackageReference "flagsmith-ios-client" */;
+			productName = FlagsmithClient;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
